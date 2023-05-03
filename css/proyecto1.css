@@ -72,13 +72,17 @@ footer {
 }
 
 .holder {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 h2 {
     color: #2e64a1;
     font-weight: 400;
+}
+
+.homeimg img {
+    max-width: 100%;
 }
 
 .columnas {
@@ -211,11 +215,11 @@ h2 {
     font-size: 14px;
 }
 
-.arriba{
-  align-items: start;
+.arriba {
+    align-items: start;
 }
 
-.formulario input[type="submit"]{
+.formulario input[type="submit"] {
     background-color: #6da9ed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: white;
@@ -232,6 +236,80 @@ h2 {
     height: 150px;
 }
 
-.formulario input[type="submit"]:hover{
+.formulario input[type="submit"]:hover {
     background-color: #2e64a1;
-} 
+}
+
+@media screen and (max-width:550px) {
+    .columnas {
+        flex-direction: column;
+    }
+
+    .bienvenidos,
+    .testimonios {
+        width: 100%;
+    }
+
+    .holder {
+        padding: 0 16px;
+    }
+
+    .testimonio {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .bienvenidos p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .personas {
+        flex-wrap: wrap;
+    }
+
+    .persona {
+        width: 30%;
+        width: 47%;
+        margin-bottom: 15px;
+    }
+
+    .persona p {
+        text-align: center;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .formulario p {
+        display: block;
+    }
+
+    .formulario p input,
+    .formulario p textarea {
+        width: 95%;
+    }
+
+    .formulario input[type="submit"] {
+        margin-left: 422px;
+    }
+
+    header .holder {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo img{
+        max-width: 80px;
+    }
+
+    header h1{
+        bottom: 20px;
+    }
+
+    nav ul.holder{
+        flex-direction: column;
+        padding: 0;
+    }
+}
